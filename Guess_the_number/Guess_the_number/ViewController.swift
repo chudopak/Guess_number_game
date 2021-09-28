@@ -16,7 +16,7 @@ struct AlertData {
 class ViewController: UIViewController
 {
 	
-	private var _currentSliderValue: Int = 1
+	private var _currentSliderValue: Int = 0
 	private var _targetValue: Int = 0
 	private let _failAlert		= AlertData(controllerTitle: "You failed",
 										  controllerMessage: "Sucker, target value is: ",
@@ -24,10 +24,13 @@ class ViewController: UIViewController
 	private let _successAlert	= AlertData(controllerTitle: "You Did well",
 										  controllerMessage: "pussy BOIIIII, target value is:",
 											    actionTitle: "Ok")
+	@IBOutlet weak var slider: UISlider!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		_targetValue = 1 + Int(arc4random_uniform(100))
+		_currentSliderValue = Int(slider.value)
+		print(_currentSliderValue)
 		// Do any additional setup after loading the view.
 	}
 
