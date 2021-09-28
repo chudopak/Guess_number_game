@@ -63,7 +63,7 @@ class ViewController: UIViewController
 		let alert = UIAlertController(title: "Failure!",
 									  message: "The target Value is \(_targetValue)\n" +
 											   "The current Value is \(_currentSliderValue)\n" +
-											   "The difference is \(abs(difference))\n",
+											   "The difference is \(difference)\n",
 									  preferredStyle: .alert)
 		let action = UIAlertAction(title: "FOOOk, I will try again!", style: .cancel,
 								   handler: nil)
@@ -75,7 +75,7 @@ class ViewController: UIViewController
 		let alert = UIAlertController(title: "Success!",
 									  message: "The target Value is \(_targetValue)\n" +
 											   "The current Value is \(_currentSliderValue)\n" +
-											   "The difference is \(abs(difference))",
+											   "The difference is \(difference)",
 									  preferredStyle: .alert)
 		let action = UIAlertAction(title: "My Bigga", style: .cancel,
 								   handler: nil)
@@ -84,10 +84,10 @@ class ViewController: UIViewController
 	}
 
 	@IBAction func popUpAlert() {
-		let difference = _currentSliderValue - _targetValue
+		let difference = abs(_currentSliderValue - _targetValue)
 		if (-_maxDifferenceFromTarget < difference && difference < _maxDifferenceFromTarget) {
 			_showSuccessAlert(difference: difference)
-			_score += _maxDifferenceFromTarget - abs(difference)
+			_score += _maxDifferenceFromTarget - difference
 		} else {
 			_showFailAlert(difference: difference)
 		}
