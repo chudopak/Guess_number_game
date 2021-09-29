@@ -35,9 +35,15 @@ class ViewController: UIViewController
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		_setNewRound()
+		_startNewGame()
 		_setStartScreen()
 		// Do any additional setup after loading the view.
+	}
+	
+	private func _startNewGame() {
+		_round = 0
+		_score = 0
+		_setNewRound()
 	}
 	
 	private func _setStartScreen() {
@@ -59,6 +65,11 @@ class ViewController: UIViewController
 		_currentSliderValue = Int(slider.value)
 	}
 	
+	private func _alertAction() {
+		_setNewRound()
+		_updateLabels()
+	}
+	
 	private func _showFailAlert(difference: Int) {
 		let alert = UIAlertController(title: "Failure!",
 									  message: "The target Value is \(_targetValue)\n" +
@@ -66,7 +77,9 @@ class ViewController: UIViewController
 											   "The difference is \(difference)\n",
 									  preferredStyle: .alert)
 		let action = UIAlertAction(title: "FOOOk, I will try again!", style: .cancel,
-								   handler: nil)
+								   handler: {
+									action in self._alertAction()
+								   })
 		alert.addAction(action)
 		present(alert, animated: true, completion: nil)
 	}
@@ -78,7 +91,9 @@ class ViewController: UIViewController
 											   "The difference is \(difference)",
 									  preferredStyle: .alert)
 		let action = UIAlertAction(title: "My Bigga", style: .cancel,
-								   handler: nil)
+								   handler: {
+									action in self._alertAction()
+								   })
 		alert.addAction(action)
 		present(alert, animated: true, completion: nil)
 	}
@@ -91,12 +106,15 @@ class ViewController: UIViewController
 		} else {
 			_showFailAlert(difference: difference)
 		}
-		_setNewRound()
-		_updateLabels()
 	}
 	
 	@IBAction func sliderMoved(_ slider: UISlider) {
 		_currentSliderValue = Int(slider.value)
+	}
+	
+	@IBAction func startOver () {
+		_startNewGame()
+		_updateLabels()
 	}
 }
 
