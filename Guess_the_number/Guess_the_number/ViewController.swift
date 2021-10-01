@@ -37,7 +37,21 @@ class ViewController: UIViewController
 		super.viewDidLoad()
 		_startNewGame()
 		_setStartScreen()
+		_assignBackground()
 		// Do any additional setup after loading the view.
+	}
+	
+	private func _assignBackground(){
+		let background = UIImage(named: "Background")
+
+		var imageView : UIImageView!
+		imageView = UIImageView(frame: view.bounds)
+		imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+		imageView.clipsToBounds = true
+		imageView.image = background
+		imageView.center = view.center
+		view.addSubview(imageView)
+		self.view.sendSubviewToBack(imageView)
 	}
 	
 	private func _startNewGame() {
