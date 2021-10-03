@@ -9,13 +9,12 @@ import UIKit
 
 class AboutViewController: UIViewController {
 
-    override func viewDidLoad() {
+	override func viewDidLoad() {
         super.viewDidLoad()
 		_assignBackground()
-
         // Do any additional setup after loading the view.
     }
-    
+	
 	private func _assignBackground(){
 		let background = UIImage(named: "Background")
 

@@ -7,12 +7,6 @@
 
 import UIKit
 
-struct AlertData {
-	let controllerTitle: String
-	let controllerMessage: String
-	let actionTitle: String
-}
-
 class ViewController: UIViewController
 {
 	
@@ -134,7 +128,7 @@ class ViewController: UIViewController
 		let difference = abs(_currentSliderValue - _targetValue)
 		if (-_maxDifferenceFromTarget < difference && difference < _maxDifferenceFromTarget) {
 			_showSuccessAlert(difference: difference)
-			_score += _maxDifferenceFromTarget - difference
+			_score += _maxDifferenceFromTarget - difference + 1
 		} else {
 			_showFailAlert(difference: difference)
 		}

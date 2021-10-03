@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D0D51CE270A0AC4004FF2FE /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = 7D0D51CD270A0AC4004FF2FE /* BullsEye.html */; };
 		7D68BBF226F4D7DB00C3672A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68BBF126F4D7DB00C3672A /* AppDelegate.swift */; };
 		7D68BBF426F4D7DB00C3672A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68BBF326F4D7DB00C3672A /* SceneDelegate.swift */; };
 		7D68BBF626F4D7DB00C3672A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68BBF526F4D7DB00C3672A /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D0D51CD270A0AC4004FF2FE /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = BullsEye.html; path = ../../Resources/BullsEye.html; sourceTree = "<group>"; };
 		7D68BBEE26F4D7DB00C3672A /* Guess_the_number.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guess_the_number.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D68BBF126F4D7DB00C3672A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D68BBF326F4D7DB00C3672A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		7D68BBF026F4D7DB00C3672A /* Guess_the_number */ = {
 			isa = PBXGroup;
 			children = (
+				7D0D51CD270A0AC4004FF2FE /* BullsEye.html */,
 				7D68BBF126F4D7DB00C3672A /* AppDelegate.swift */,
 				7D68BBF326F4D7DB00C3672A /* SceneDelegate.swift */,
 				7D68BBF526F4D7DB00C3672A /* ViewController.swift */,
@@ -128,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D68BBFE26F4D7DD00C3672A /* LaunchScreen.storyboard in Resources */,
+				7D0D51CE270A0AC4004FF2FE /* BullsEye.html in Resources */,
 				7D68BBFB26F4D7DD00C3672A /* Assets.xcassets in Resources */,
 				7D68BBF926F4D7DB00C3672A /* Main.storyboard in Resources */,
 			);

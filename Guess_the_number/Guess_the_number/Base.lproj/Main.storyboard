@@ -8,11 +8,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="TimesNewRoman.ttf">
-            <string>.SFUI-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -27,9 +22,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="wordWrap" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8j-9l-IZf">
-                                <rect key="frame" x="283.5" y="223" width="100" height="37"/>
+                                <rect key="frame" x="283.5" y="227.5" width="100" height="37"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="L2C-FI-pgi"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="L2C-FI-pgi"/>
                                     <constraint firstAttribute="height" constant="37" id="acl-dj-BsS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
@@ -43,9 +38,11 @@
                                     <action selector="popUpAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="d5d-eb-D0Z"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Put the slider as close as you can to " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-FS-JcX">
-                                <rect key="frame" x="148.5" y="37" width="368" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Put the slider as close as you can to " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-FS-JcX">
+                                <rect key="frame" x="128" y="40" width="368" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="368" id="PuG-gS-a2t"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="21"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -53,14 +50,18 @@
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fSb-K8-wgw">
-                                <rect key="frame" x="94" y="158" width="479" height="31"/>
+                                <rect key="frame" x="94" y="162.5" width="479" height="31"/>
                                 <color key="minimumTrackTintColor" systemColor="systemYellowColor"/>
                                 <connections>
                                     <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="EIZ-gs-VJu"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwg-Nf-LmP">
-                                <rect key="frame" x="50" y="171.5" width="36" height="24.5"/>
+                                <rect key="frame" x="50" y="165" width="36" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="AkQ-ur-9ZC"/>
+                                    <constraint firstAttribute="height" constant="25" id="DJa-pe-rox"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -68,89 +69,129 @@
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVg-Nt-0BW">
-                                <rect key="frame" x="581" y="171.5" width="36" height="24.5"/>
+                                <rect key="frame" x="581" y="165" width="36" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="PhI-oY-SDc"/>
+                                    <constraint firstAttribute="height" constant="25" id="nMw-Cd-cRC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.50413088770000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Round:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwx-pa-fat">
-                                <rect key="frame" x="483" y="323" width="62" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwx-pa-fat">
+                                <rect key="frame" x="477" y="325" width="69" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="GrQ-MS-Bcf"/>
+                                    <constraint firstAttribute="width" constant="69" id="myw-bY-mbk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.49286626348432327" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjY-FM-wk4">
-                                <rect key="frame" x="611" y="318" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="InfoButton" backgroundImage="SmallButton"/>
-                                <connections>
-                                    <segue destination="htU-gK-4Lb" kind="presentation" modalPresentationStyle="pageSheet" id="qHF-vq-eTt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZd-Bn-nZU">
-                                <rect key="frame" x="47" y="317" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZd-Bn-nZU">
+                                <rect key="frame" x="35" y="318" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="V7F-gj-aG9"/>
+                                    <constraint firstAttribute="width" constant="32" id="q4B-WL-sRG"/>
+                                </constraints>
                                 <state key="normal" image="StartOverIcon" backgroundImage="SmallButton"/>
                                 <connections>
                                     <action selector="startOver" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vf9-x6-e1x"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFU-Iv-lic">
-                                <rect key="frame" x="130" y="322" width="58" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFU-Iv-lic">
+                                <rect key="frame" x="92" y="325" width="64" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="XNT-hJ-fep"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="YeY-3D-3Dk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.49286626348432327" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wT-8O-5No">
-                                <rect key="frame" x="196" y="322" width="31" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wT-8O-5No">
+                                <rect key="frame" x="161" y="325" width="31" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31" id="2sL-hD-YCD"/>
+                                    <constraint firstAttribute="height" constant="25" id="TdU-3s-LO6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.49286626350000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCz-BJ-D6K">
-                                <rect key="frame" x="527.5" y="37" width="36" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCz-BJ-D6K">
+                                <rect key="frame" x="503" y="40" width="36" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="ZlT-JD-9EA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.50413088766944325" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFc-wd-Nwv">
-                                <rect key="frame" x="553" y="322" width="24" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFc-wd-Nwv">
+                                <rect key="frame" x="551" y="325" width="24" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="hjl-1B-kFl"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="r2S-wk-JKO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.49286626350000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjY-FM-wk4">
+                                <rect key="frame" x="600" y="318" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="1eb-tl-6Kf"/>
+                                    <constraint firstAttribute="width" constant="32" id="Tbj-GQ-f0S"/>
+                                </constraints>
+                                <state key="normal" image="InfoButton" backgroundImage="SmallButton"/>
+                                <connections>
+                                    <segue destination="htU-gK-4Lb" kind="presentation" modalPresentationStyle="pageSheet" id="qHF-vq-eTt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TDQ-3W-qvd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="H8j-9l-IZf" firstAttribute="top" secondItem="fSb-K8-wgw" secondAttribute="bottom" constant="35" id="0A3-46-SlS"/>
-                            <constraint firstItem="CVg-Nt-0BW" firstAttribute="baseline" secondItem="Jwg-Nf-LmP" secondAttribute="baseline" id="65i-Cz-rAt"/>
+                            <constraint firstItem="CVg-Nt-0BW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-10" id="0Sz-kV-4Rb"/>
+                            <constraint firstItem="RCz-BJ-D6K" firstAttribute="height" secondItem="kbi-FS-JcX" secondAttribute="height" id="37U-pl-PED"/>
+                            <constraint firstItem="TDQ-3W-qvd" firstAttribute="trailing" secondItem="bjY-FM-wk4" secondAttribute="trailing" constant="35" id="3OC-IY-SQL"/>
+                            <constraint firstItem="ZFU-Iv-lic" firstAttribute="leading" secondItem="xZd-Bn-nZU" secondAttribute="trailing" constant="25" id="4uK-yS-Wwg"/>
+                            <constraint firstItem="TDQ-3W-qvd" firstAttribute="bottom" secondItem="xZd-Bn-nZU" secondAttribute="bottom" constant="25" id="4zl-vW-y7k"/>
+                            <constraint firstItem="TDQ-3W-qvd" firstAttribute="bottom" secondItem="ZFU-Iv-lic" secondAttribute="bottom" constant="25" id="6f2-8a-KeF"/>
                             <constraint firstItem="H8j-9l-IZf" firstAttribute="centerX" secondItem="TDQ-3W-qvd" secondAttribute="centerX" id="93G-Sr-Ujl"/>
+                            <constraint firstItem="TDQ-3W-qvd" firstAttribute="bottom" secondItem="Zwx-pa-fat" secondAttribute="bottom" constant="25" id="Buo-pb-wrQ"/>
+                            <constraint firstItem="kbi-FS-JcX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-21.5" id="GmA-eq-Qgv"/>
+                            <constraint firstItem="TDQ-3W-qvd" firstAttribute="bottom" secondItem="3wT-8O-5No" secondAttribute="bottom" constant="25" id="Gnj-As-e3H"/>
                             <constraint firstItem="fSb-K8-wgw" firstAttribute="leading" secondItem="Jwg-Nf-LmP" secondAttribute="trailing" constant="10" id="HUB-1Q-kDh"/>
                             <constraint firstItem="TDQ-3W-qvd" firstAttribute="trailing" secondItem="CVg-Nt-0BW" secondAttribute="trailing" constant="50" id="LJo-WK-3dY"/>
-                            <constraint firstItem="CVg-Nt-0BW" firstAttribute="firstBaseline" secondItem="Jwg-Nf-LmP" secondAttribute="firstBaseline" id="SU5-Zw-ry5"/>
-                            <constraint firstItem="TDQ-3W-qvd" firstAttribute="bottom" secondItem="H8j-9l-IZf" secondAttribute="bottom" constant="115" id="Vci-Mc-P57"/>
+                            <constraint firstItem="JFc-wd-Nwv" firstAttribute="leading" secondItem="Zwx-pa-fat" secondAttribute="trailing" constant="5" id="LdE-nK-kDh"/>
+                            <constraint firstItem="Jwg-Nf-LmP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-10" id="N7j-az-Wl9"/>
+                            <constraint firstItem="fSb-K8-wgw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-10" id="Nxx-x0-G4P"/>
+                            <constraint firstItem="TDQ-3W-qvd" firstAttribute="bottom" secondItem="JFc-wd-Nwv" secondAttribute="bottom" constant="25" id="RHD-r7-xA8"/>
+                            <constraint firstItem="RCz-BJ-D6K" firstAttribute="top" secondItem="TDQ-3W-qvd" secondAttribute="top" constant="40" id="Twv-Kr-jYs"/>
+                            <constraint firstItem="3wT-8O-5No" firstAttribute="leading" secondItem="ZFU-Iv-lic" secondAttribute="trailing" constant="5" id="UTa-Su-dKu"/>
+                            <constraint firstItem="RCz-BJ-D6K" firstAttribute="leading" secondItem="kbi-FS-JcX" secondAttribute="trailing" constant="7" id="WVm-L1-amB"/>
+                            <constraint firstItem="bjY-FM-wk4" firstAttribute="leading" secondItem="JFc-wd-Nwv" secondAttribute="trailing" constant="25" id="fvd-xr-i8a"/>
+                            <constraint firstItem="kbi-FS-JcX" firstAttribute="top" secondItem="TDQ-3W-qvd" secondAttribute="top" constant="40" id="izp-5F-Dh5"/>
                             <constraint firstItem="Jwg-Nf-LmP" firstAttribute="leading" secondItem="TDQ-3W-qvd" secondAttribute="leading" constant="50" id="kcf-dX-867"/>
-                            <constraint firstItem="fb5-eU-Hnl" firstAttribute="top" secondItem="CVg-Nt-0BW" secondAttribute="bottom" constant="179" id="nOc-95-lKR"/>
                             <constraint firstItem="fSb-K8-wgw" firstAttribute="centerX" secondItem="TDQ-3W-qvd" secondAttribute="centerX" id="r1t-wR-DUJ"/>
                             <constraint firstItem="CVg-Nt-0BW" firstAttribute="leading" secondItem="fSb-K8-wgw" secondAttribute="trailing" constant="10" id="r2r-8K-72D"/>
+                            <constraint firstItem="xZd-Bn-nZU" firstAttribute="leading" secondItem="TDQ-3W-qvd" secondAttribute="leading" constant="35" id="uQ8-Tb-Ys0"/>
+                            <constraint firstItem="TDQ-3W-qvd" firstAttribute="bottom" secondItem="bjY-FM-wk4" secondAttribute="bottom" constant="25" id="uTR-Hh-GFW"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
@@ -175,21 +216,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UQ-c1-KjI">
-                                <rect key="frame" x="83.5" y="50" width="500" height="175"/>
-                                <color key="backgroundColor" red="0.49411764705882355" green="0.23137254901960785" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" red="0.41267533735795459" green="0.19337555442846849" blue="0.14017273988822607" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="500" id="AQt-cI-SkE"/>
-                                    <constraint firstAttribute="height" constant="175" id="jB1-CY-gVC"/>
-                                </constraints>
-                                <string key="text">Welcome to the simple game "Guess the NUMBER"  where you can win points and fame by dragging a slider.
-Your goal is to place the slider as close as possible to the target value. The closer you are, the more points you score. Enjoy!
-If you put slider far then 3 you loose and don't get any score.</string>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="wordWrap" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsV-xa-QpD">
                                 <rect key="frame" x="283.5" y="304" width="100" height="37"/>
                                 <constraints>
@@ -210,20 +236,43 @@ If you put slider far then 3 you loose and don't get any score.</string>
                                     <action selector="close" destination="htU-gK-4Lb" eventType="touchUpInside" id="Adx-7S-STL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LZ-Mj-M5q">
+                                <rect key="frame" x="227" y="35" width="213" height="29"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.50413088770000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anS-gP-1Gt">
+                                <rect key="frame" x="100" y="99" width="467" height="141"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="AVZ-tM-QUQ"/>
+                                </constraints>
+                                <string key="text">This is the awesome game of Guess the Number where you can win points and earn fame by dragging a slider. Your goal is to place the slider as close as possible to the target value. The closer you are, the more points you score.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Ma-Ml-wSX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="5LZ-Mj-M5q" firstAttribute="centerX" secondItem="TmK-aa-gdq" secondAttribute="centerX" id="0dq-Hf-zG4"/>
+                            <constraint firstItem="anS-gP-1Gt" firstAttribute="top" secondItem="5LZ-Mj-M5q" secondAttribute="bottom" constant="35" id="Eud-2K-m9j"/>
                             <constraint firstItem="9Ma-Ml-wSX" firstAttribute="bottom" secondItem="xsV-xa-QpD" secondAttribute="bottom" constant="34" id="FFw-nB-QgB"/>
+                            <constraint firstItem="9Ma-Ml-wSX" firstAttribute="trailing" secondItem="anS-gP-1Gt" secondAttribute="trailing" constant="100" id="OTB-ac-7UE"/>
                             <constraint firstItem="xsV-xa-QpD" firstAttribute="centerX" secondItem="9Ma-Ml-wSX" secondAttribute="centerX" id="ZR8-gY-xoV"/>
-                            <constraint firstItem="4UQ-c1-KjI" firstAttribute="top" secondItem="9Ma-Ml-wSX" secondAttribute="top" constant="50" id="kKu-iC-g3V"/>
-                            <constraint firstItem="4UQ-c1-KjI" firstAttribute="centerX" secondItem="TmK-aa-gdq" secondAttribute="centerX" id="tUb-QA-fUw"/>
+                            <constraint firstItem="5LZ-Mj-M5q" firstAttribute="top" secondItem="9Ma-Ml-wSX" secondAttribute="top" constant="35" id="fbN-5A-rbj"/>
+                            <constraint firstItem="anS-gP-1Gt" firstAttribute="leading" secondItem="9Ma-Ml-wSX" secondAttribute="leading" constant="100" id="kLx-PB-bUb"/>
+                            <constraint firstItem="anS-gP-1Gt" firstAttribute="centerX" secondItem="9Ma-Ml-wSX" secondAttribute="centerX" id="svc-e4-5Vk"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mrA-P8-CAS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="613.73239436619724" y="191.25"/>
+            <point key="canvasLocation" x="613.04347826086962" y="191.19999999999999"/>
         </scene>
     </scenes>
     <resources>
