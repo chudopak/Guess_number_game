@@ -102,7 +102,7 @@ class ViewController: UIViewController
 											   "The current Value is \(_currentSliderValue)\n" +
 											   "The difference is \(difference)\n",
 									  preferredStyle: .alert)
-		let action = UIAlertAction(title: "FOOOk, I will try again!", style: .cancel,
+		let action = UIAlertAction(title: "I will try again!", style: .cancel,
 								   handler: {
 									action in self._alertAction()
 								   })
@@ -116,7 +116,7 @@ class ViewController: UIViewController
 											   "The current Value is \(_currentSliderValue)\n" +
 											   "The difference is \(difference)",
 									  preferredStyle: .alert)
-		let action = UIAlertAction(title: "My Bigga", style: .cancel,
+		let action = UIAlertAction(title: "OK!", style: .cancel,
 								   handler: {
 									action in self._alertAction()
 								   })
